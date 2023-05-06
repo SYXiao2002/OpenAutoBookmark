@@ -1,6 +1,6 @@
 # OpenAutoBookmark
 
-OpenAutoBookmark is a tool that replaces the AutoBookmark™ Plug-in for Adobe® Acrobat. It is designed to help users add bookmarks to their PDF files automatically.
+OpenAutoBookmark is an automated tool designed to create bookmarks for PDF files, which has a similar functionality of the AutoBookmark™ Plug-in for Adobe® Acrobat. 
 
 ## Features
 
@@ -12,6 +12,7 @@ In the foreseeable future, a more intuitive and user-friendly version will be cr
 
 - Support for specifying regular expressions via the argc parameter in the terminal
 - Various default regular expressions to use, with sub bookmarks
+- Better self-defined regular expression interface, especially for newcomers
 
 
 ## Usage
