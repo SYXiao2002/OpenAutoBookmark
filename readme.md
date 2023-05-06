@@ -8,6 +8,12 @@ OpenAutoBookmark is a tool that replaces the AutoBookmark™ Plug-in for Adobe®
 - Customize bookmark generation using regular expressions
 - Open source and free to use
 
+In the foreseeable future, a more intuitive and user-friendly version will be created and made available for download on Homebrew:
+
+- Support for specifying regular expressions via the argc parameter in the terminal
+- Various default regular expressions to use, with sub bookmarks
+
+
 ## Usage
 
 1. Install OpenAutoBookmark repo on your machine.
