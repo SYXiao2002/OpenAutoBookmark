@@ -19,7 +19,7 @@ OpenAutoBookmark is a tool that replaces the AutoBookmark™ Plug-in for Adobe®
 
 To install OpenAutoBookmark, follow these steps:
 
-1. Download the latest release from the [OpenAutoBookmark GitHub repository](https://github.com/OpenAutoBookmark/OpenAutoBookmark/releases).
+1. Download the latest release from the [OpenAutoBookmark GitHub repository](https://github.com/SYXiao2002/OpenAutoBookmark/releases).
 2. Extract the downloaded ZIP file to a directory of your choice.
 3. Run the `openautobookmark.py` script to launch the program.
 
