@@ -44,7 +44,7 @@ For the sub bookmarks, similar way to customize.
 
 ## Support
 
-If you encounter any issues or have any questions about OpenAutoBookmark, please open an issue on the [OpenAutoBookmark GitHub repository](https://github.com/OpenAutoBookmark/OpenAutoBookmark/issues).
+If you encounter any issues or have any questions about OpenAutoBookmark, please open an issue on the [OpenAutoBookmark GitHub repository](https://github.com/SYXiao2002/OpenAutoBookmark/issues).
 
 ## License
 
