@@ -1,6 +1,8 @@
 # OpenAutoBookmark
 
 OpenAutoBookmark is an automated tool designed to create bookmarks for PDF files, which has a similar functionality of the AutoBookmark™ Plug-in for Adobe® Acrobat. 
+Basically, it scans PDF files and automatically generates a hierarchical table of contents based on headings and subheadings in the document. 
+Users can customize and adjust the bookmarks to their preference, making it easier to navigate through the document. 
 
 ## Features
 
