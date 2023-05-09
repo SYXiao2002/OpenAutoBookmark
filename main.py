@@ -1,10 +1,11 @@
-from PyPDF2 import PdfFileReader, PdfFileWriter
+import pypdf
+from pypdf import PdfReader, PdfWriter
 import re
 
 # Open PDF file and get page object
 pdf_file = open('example.pdf', 'rb')
-pdf_reader = PdfFileReader(pdf_file)
-num_pages = pdf_reader.getNumPages()
+reader = PdfReader(pdf_file)
+num_pages = len(reader.pages)
 
 # Define the regular expression for header levels
 """ 
@@ -23,8 +24,8 @@ headers = []
 
 # Iterate over each page and search for headers
 for page_num in range(num_pages):
-    page = pdf_reader.getPage(page_num)
-    content = page.extractText()
+    page = reader.pages[page_num]
+    content = page.extract_text()
     lines = content.split('\n')
     for line in lines:
         # Match the header level regular expression
@@ -41,18 +42,18 @@ with open('headers.txt', 'w') as f:
         f.write(f'{header} - Title Level {title_level} - Page {page_num}\n')
 
 # Create a PDF writer object and add bookmarks
-pdf_writer = PdfFileWriter()
+pdf_writer = PdfWriter()
 for page in range(num_pages):
-    pdf_writer.addPage(pdf_reader.getPage(page))
+    pdf_writer.add_page(reader.pages[page])
 
 for header, title_level, page in headers:
     # Add bookmarks based on header level
     if title_level == 1:
-        level1_bookmark = pdf_writer.addBookmark(title=header, pagenum=page)
+        level1_bookmark = pdf_writer.add_outline_item(title=header, page_number=page)
     elif title_level == 2:
-        level2_bookmark = pdf_writer.addBookmark(title=header, pagenum=page, parent=level1_bookmark)
+        level2_bookmark = pdf_writer.add_outline_item(title=header, page_number=page, parent=level1_bookmark)
     elif title_level == 3:
-        level3_bookmark = pdf_writer.addBookmark(title=header, pagenum=page, parent=level2_bookmark)
+        level3_bookmark = pdf_writer.add_outline_item(title=header, page_number=page, parent=level2_bookmark)
 
 # Write to a new PDF file
 with open('example_with_bookmarks.pdf', 'wb') as f:
